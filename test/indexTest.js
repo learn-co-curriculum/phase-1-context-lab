@@ -1,3 +1,5 @@
+const helpers = require('./helpers')
+
 describe("The payroll system", function () {
   describe("populates a record from an Array", function () {
     it("has a function called createEmployeeRecord", function () {

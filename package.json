@@ -17,5 +17,8 @@
     "mocha": "5.2.0",
     "mocha-jsdom": "~1.1.0",
     "mocha-multi": "1.0.1"
+  },
+  "dependencies": {
+    "chai-spies": "^1.0.0"
   }
 }
