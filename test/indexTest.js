@@ -57,6 +57,12 @@ describe("The payroll system", function () {
         expect(employeeRecords.length).to.equal(2)
       })
 
+      it("its implementation makes use of of the createEmployeeRecord function", function(){
+        let mySpy = chai.spy.on(window, "createEmployeeRecord")
+        createEmployees([["Mister", "Matt", "Chief Awesomeness Offiser", 1000]])
+        expect(mySpy).to.have.been.called()
+      })
+
       it("correctly assigns the first names", function () {
         let employeeRecords = createEmployees(twoRows)
         let nameExtractor = function (e) { return e.firstName }
