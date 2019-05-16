@@ -51,14 +51,15 @@ We'll now identify places where the _execution context_ is implicitly set.
 ### Access Implicitly-Set Global Object in a JavaScript Engine
 
 ```javascript
-this //=> Window
+this //=> Window (the class of the object we're "inside;" explained below)
 typeof this //=> "object"
 this === window //=> true
-this === Window //=> false
 ```
+
 In a brand new Chrome console, try the code above. All the code you write in a
 JavaScript file can be thought of as "one big function" whose context is set to
-the `window` object. Thus `this === window` is `true`.
+the `window` object. Thus `this === window` is `true`. When you type `this`,
+JavaScript tells you you're in a context that, itself, is of type `Window`.
 
 We can try the same thing out in NodeJS. If you have `node` installed on your
 computer, open the Node REPL by typing `node`.
@@ -70,15 +71,6 @@ this === global //=> true
 Node calls the default _execution context_ `global`, but otherwise it's a
 global object like `window`.
 
-Keen-eyed readers might have noticed that `this` returns `Window`.  But,
-astoundingly, `this === Window //=> false`. It's like you asked someone "Who
-are you?" and they replied "Sam" and then you asked, "Are you Sam?" and they
-said "No." This is the sort of thing about JavaScript where developers _are_
-entitled to gripe (a little bit). It would make a **LOT** more sense if `this`
-returned `window` (since that's `true`). But it doesn't. Day-to-day, it doesn't
-impact JavaScript developers' lives much, so don't get too hung up on it right
-now. If you're driven to unearth the motivations behind this consult
-[Window.window][w1].
 
 ### Access Implicitly-Set Global Object in a Function Call
 
@@ -422,13 +414,11 @@ whenever you need! We do!
 
 ## Resources
 
-* [Window][w1]
 * [strict][]
 * [`bind`][bind]
 * [`call`][call]
 * [`apply`][apply]
 
-[w1]: https://developer.mozilla.org/en-US/docs/Web/API/Window/window
 [bind]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind
 [call]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/call
 [apply]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/apply
