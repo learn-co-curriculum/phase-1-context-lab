@@ -163,9 +163,9 @@ For more on strict-mode, see the Resources.
 
 ### Access Implicitly-Set Parent Object in a Contained Function Expression
 
-This (no pun intended) is simple, thankfully: functions inside Objects have
-`this` pointing to their container so that they can access other sibling
-properties or functions:
+This (no pun intended) case is simple, thankfully: functions inside `Object`s
+have `this` set to the thing to the left of the `.`. This lets them point
+access other sibling properties and functions:
 
 ```js
 let byronPoodle = {
