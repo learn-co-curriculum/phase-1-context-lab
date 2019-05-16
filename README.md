@@ -54,11 +54,11 @@ We'll now identify places where the _execution context_ is implicitly set.
 this //=> Window
 typeof this //=> "object"
 this === window //=> true
+this === Window //=> false
 ```
-
 In a brand new Chrome console, try the code above. All the code you write in a
 JavaScript file can be thought of as "one big function" whose context is set to
-the `Window` object. Thus `this === window` is `true`.
+the `window` object. Thus `this === window` is `true`.
 
 We can try the same thing out in NodeJS. If you have `node` installed on your
 computer, open the Node REPL by typing `node`.
@@ -70,19 +70,15 @@ this === global //=> true
 Node calls the default _execution context_ `global`, but otherwise it's a
 global object like `window`.
 
-> **STICKY PROBLEM**: Keen-eyed readers might be thinking: "But is `this ===
-> Window` also `true`?" It is not. The `window` property is part of the
-> `Window` global object; yes, the `Window` `Object` has a property that points
-> to itself.
->
-> Due to the strictness of `===`, a property pointing to a thing is not the
-> same thing as the thing itself. As such `this === Window` is `false`, but `this
-> === window` is `true` _despite the fact_ that they both ultimately point to
-> the same thing.
->
-> If all this strikes you as a bit fussy and uninteresting, it's not essential
-> understanding for the rest of this module. For more on this consult
-> [Window.window][w1].
+Keen-eyed readers might have noticed that `this` returns `Window`.  But,
+astoundingly, `this === Window //=> false`. It's like you asked someone "Who
+are you?" and they replied "Sam" and then you asked, "Are you Sam?" and they
+said "No." This is the sort of thing about JavaScript where developers _are_
+entitled to gripe (a little bit). It would make a **LOT** more sense if `this`
+returned `window` (since that's `true`). But it doesn't. Day-to-day, it doesn't
+impact JavaScript developers' lives much, so don't get too hung up on it right
+now. If you're driven to unearth the motivations behind this consult
+[Window.window][w1].
 
 ### Access Implicitly-Set Global Object in a Function Call
 
