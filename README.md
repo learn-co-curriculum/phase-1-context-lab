@@ -292,7 +292,7 @@ addition to a phrase), it could be assumed as a _context_ and thus accessible
 via `this`. That's what we're doing with the function `introWithContext` as
 invoked with either `call` or `apply`.
 
-The `introWithContext` function has expects only a catchphrase. Both `call` and
+The `introWithContext` function expects only a catchphrase as an argument. Both `call` and
 `apply` take a `thisArg` argument as their first argument (see their
 documentation for further clarification): that argument becomes the `this`
 _inside_ the function.  In the case of `call`, anything after the `thisArg`
