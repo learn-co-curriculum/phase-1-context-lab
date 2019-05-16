@@ -409,7 +409,7 @@ whenever you need! We do!
 
 1. Execution context is set at function call-time, implicitly or explicitly.
 2. Execution context defaults to the global object unless prevented by `"use strict"`.
-3. Execution context defaults to the containing `Object` for function expressions that are properties within that `Object*
+3. Execution context defaults to the containing `Object` for function expressions that are properties within that `Object`
 4. Execution context defaults to the new object in a `class`'s `constructor`***
 1. Execution context is set in a function by invoking `call` on the function
    and passing, as first argument, a `thisArg` which is accessed via `this` in
