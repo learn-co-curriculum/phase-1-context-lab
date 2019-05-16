@@ -33,7 +33,7 @@ When a function in JavaScript ***is called***, it is provided an _execution
 context_.
 
 The _execution context_ is a JavaScript `Object` that is either implicitly or
-explicitly passed along with the function at the time of the function's call.
+explicitly passed at the time of the function's call.
 
 The implicit way of passing a context with a function is something we have to
 memorize and accept as part of the nature of JavaScript.
