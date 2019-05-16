@@ -104,16 +104,6 @@ Doesn't that seem _nice_ and handy to do? In an effort to be nice to us
 programmers, JavaScript's implementers made the global object available inside
 all functions.
 
-> **NEUROLINGUISTIC/ANTHROPOLOGICAL ASIDE**: Some people think that `this` is a
-> strange thing to call such an important concept. But pronouns like "this,"
-> "he," or "here" all refer to a _context_. At a concert, if I say (scream)
-> "It's noisy here," you don't think "Here in the Milky Way galaxy? I disagree.
-> Space has little oxygen as a sound medium and is therefore quite quiet." To
-> the contrary, you recognize the most relevant context is at this significant
-> and unusual happening with giant speakers and guitar players and know that
-> "here" refers to "this concert." JavaScript thought the best pronoun to use
-> was `this`, and it seems sensible to us.
-
 This rule is ***very, very, very*** important and is at the root of a vital
 bug we'll explore in just a few lessons.
 
@@ -129,6 +119,16 @@ function a() {
 }
 
 a()() === window //=> true
+
+> **NEUROLINGUISTIC/ANTHROPOLOGICAL ASIDE**: Some people think that `this` is a
+> strange thing to call such an important concept. But pronouns like "this,"
+> "he," or "here" all refer to a _context_. At a concert, if I say (scream)
+> "It's noisy here," you don't think "Here in the Milky Way galaxy? I disagree.
+> Space has little oxygen as a sound medium and is therefore quite quiet."
+> Instead, you recognize the most-relevant context is at this significant and
+> unusual event with giant speakers and guitar players and therefore infer that
+> "here" refers to "this concert." JavaScript thought the best pronoun to use
+> was `this`, and it seems sensible to us.
 
 ### Prevent Implicitly Setting in Function Calls With `use strict`
 
