@@ -41,6 +41,118 @@ the last few lessons.
 
 Put your code in `index.js`.
 
+While you will want to be guided by the tests, you will implement the following
+functions. To make the tests easier to read, we've provided the _signatures_ of
+the functions.
+
+A function _signature_ is the function name, the arguments it expects, and what
+the function returns.
+
+### `createEmployeeRecord`
+
+* **Argument(s)**
+  * A 4-element Array of a `String`, `String`, `String`, and `Number`
+    corresponding to a first name, family name, title, and pay rate per hour
+* **Returns**
+  * JavaScript `Object` with keys:
+    * `firstName`
+    * `familyName`
+    * `title`
+    * `payPerHour`
+    * `timeInEvents`
+    * `timeOutEvents`
+* **Behavior**
+  * Loads `Array` elements into corresponding `Object` properties.
+    _Additionally_, initialize empty `Array`s on the properties `timeInEvents`
+    and `timeOutEvents`.
+
+### `createEmployees`
+
+* **Argument(s)**
+  * `Array` of `Arrays`
+* **Returns**
+  * `Array` of `Object`s
+* **Behavior**
+  * Converts each nested `Array` into an employee record using
+    `createEmployeeRecord` and accumulates it to a new `Array`
+
+### createTimeInEvent
+
+* **Argument(s)**
+  * A date stamp (`"YYYY-MM-DD"`)
+* **Returns**
+  * The record that was just updated
+* **Behavior**
+  * Add an `Object` with keys:
+    * `type`: Set to `"TimeIn"`
+    * `hour`: Derived from the argument
+    * `date`: Derived from the argument
+
+
+### createTimeOutEvent
+
+* **Argument(s)**
+  * A date stamp (`"YYYY-MM-DD"`)
+* **Returns**
+  * The record that was just updated
+* **Behavior**
+  * Add an `Object` with keys:
+    * `type`: Set to `"TimeOut"`
+    * `hour`: Derived from the argument
+    * `date`: Derived from the argument
+
+### hoursWorkedOnDate
+
+* **Argument(s)**
+  * A date of the form `"YYYY-MM-DD"`
+* **Returns**
+  * Hours worked, an `Integer`
+* **Behavior**
+  * Given a date, find the number of hours elapsed between that date's
+    timeInEvent and timeOutEvent
+
+### wagesEarnedOnDate
+
+* **Argument(s)**
+  * A date of the form `"YYYY-MM-DD"`
+* **Returns**
+  * Pay owed
+* **Behavior**
+  * Using `hoursWorkedOnDate`, multiply the hours by the record's
+    payRate to determine amount owed. Amount should be returned as a number.
+
+### allWagesFor
+
+* **Argument(s)**
+  * _None_
+* **Returns**
+  * Sum of pay owed to all employees for all dates, as a number
+* **Behavior**
+  * Using `wagesEarnedOnDate`, accumulate the value of all dates worked by the
+    employee in the record used as context. Amount should be returned as a
+    number. **HINT**: You will need to find the available dates somehow....
+
+### findEmployeebyFirstName
+
+* **Argument(s)**
+  * `srcArray`: Array of employee records
+  * `firstName`: String representing a first name held in an employee record
+* **Returns**
+  * Matching record or `undefined`
+* **Behavior**
+  * Test the `firstName` field for a match with the `firstName` argument
+
+### calculatePayroll
+
+* **Argument(s)**
+  * `Array` of employee records
+* **Returns**
+  * Pay owed for all dates
+* **Behavior**
+  * Using `wagesEarnedOnDate`, accumulate the value of all dates worked by the
+    employee in the record used as context. Amount should be returned as a
+    number.
+
 ## A Mystery on the Horizon
 
 You'll notice that in this lab we give you the implementation of `allWagesFor`.
