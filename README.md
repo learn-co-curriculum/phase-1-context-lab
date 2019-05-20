@@ -51,7 +51,7 @@ the function returns.
 ### `createEmployeeRecord`
 
 * **Argument(s)**
-  * 4-element Array of a `String`, `String`, `String`, and `Number`
+  * A 4-element Array of a `String`, `String`, `String`, and `Number`
     corresponding to a first name, family name, title, and pay rate per hour
 * **Returns**
   * JavaScript `Object` with keys:
@@ -62,8 +62,9 @@ the function returns.
     * `timeInEvents`
     * `timeOutEvents`
 * **Behavior**
-  * Loads `Array` elements into `Object` and initializes Arrays for storing
-    time in events and time out events
+  * Loads `Array` elements into corresponding `Object` properties.
+    _Additionally_, initialize empty `Array`s on the properties `timeInEvents`
+    and `timeOutEvents`.
 
 ### `createEmployees`
 
@@ -78,7 +79,7 @@ the function returns.
 ### createTimeInEvent
 
 * **Argument(s)**
-  * A date stamp
+  * A date stamp (`"YYYY-MM-DD"`)
 * **Returns**
   * The record that was just updated
 * **Behavior**
@@ -91,7 +92,7 @@ the function returns.
 ### createTimeOutEvent
 
 * **Argument(s)**
-  * A date stamp
+  * A date stamp (`"YYYY-MM-DD"`)
 * **Returns**
   * The record that was just updated
 * **Behavior**
@@ -105,7 +106,7 @@ the function returns.
 * **Argument(s)**
   * A date of the form `"YYYY-MM-DD"`
 * **Returns**
-  * Minutes worked
+  * Hours worked, an `Integer`
 * **Behavior**
   * Given a date, find the number of hours elapsed between that date's
     timeInEvent and timeOutEvent
@@ -125,11 +126,11 @@ the function returns.
 * **Argument(s)**
   * _None_
 * **Returns**
-  * Pay owed for all dates
+  * Sum of pay owed to all employees for all dates, as a number
 * **Behavior**
   * Using `wagesEarnedOnDate`, accumulate the value of all dates worked by the
     employee in the record used as context. Amount should be returned as a
-    number.
+    number. **HINT**: You will need to find the available dates somehow....
 
 ### findEmployeebyFirstName
 
