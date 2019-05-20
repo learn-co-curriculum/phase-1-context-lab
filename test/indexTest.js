@@ -163,6 +163,15 @@ describe("The payroll system", function () {
         createTimeOutEvent.call(cRecord, "44-03-15 1100")
         expect(wagesEarnedOnDate.call(cRecord, "44-03-15")).to.equal(54)
       })
+
+      it("uses hoursWorkedOnDate", function() {
+        let mySpy = chai.spy.on(window, "hoursWorkedOnDate")
+        cRecord = createEmployeeRecord(["Julius", "Caesar", "General", 27])
+        createTimeInEvent.call(cRecord, "44-03-15 0900")
+        createTimeOutEvent.call(cRecord, "44-03-15 1100")
+        wagesEarnedOnDate.call(cRecord, "44-03-15")
+        expect(mySpy).to.have.been.called()
+      })
     })
   })
 
@@ -183,6 +192,15 @@ describe("The payroll system", function () {
         createTimeOutEvent.call(cRecord, "44-03-15 1100")
         // 324 + 54
         expect(allWagesFor.call(cRecord)).to.equal(378)
+      })
+
+      it("uses wagesEarnedOnDate", function() {
+        let mySpy = chai.spy.on(window, "wagesEarnedOnDate")
+        cRecord = createEmployeeRecord(["Julius", "Caesar", "General", 27])
+        createTimeInEvent.call(cRecord, "44-03-15 0900")
+        createTimeOutEvent.call(cRecord, "44-03-15 1100")
+        allWagesFor.call(cRecord)
+        expect(mySpy).to.have.been.called()
       })
     })
   })
