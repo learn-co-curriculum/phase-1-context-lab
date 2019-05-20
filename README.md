@@ -76,7 +76,7 @@ the function returns.
   * Converts each nested `Array` into an employee record using
     `createEmployeeRecord` and accumulates it to a new `Array`
 
-### createTimeInEvent
+### `createTimeInEvent`
 
 * **Argument(s)**
   * A date stamp (`"YYYY-MM-DD"`)
@@ -89,7 +89,7 @@ the function returns.
     * `date`: Derived from the argument
 
 
-### createTimeOutEvent
+### `createTimeOutEvent`
 
 * **Argument(s)**
   * A date stamp (`"YYYY-MM-DD"`)
@@ -101,7 +101,7 @@ the function returns.
     * `hour`: Derived from the argument
     * `date`: Derived from the argument
 
-### hoursWorkedOnDate
+### `hoursWorkedOnDate`
 
 * **Argument(s)**
   * A date of the form `"YYYY-MM-DD"`
@@ -111,7 +111,7 @@ the function returns.
   * Given a date, find the number of hours elapsed between that date's
     timeInEvent and timeOutEvent
 
-### wagesEarnedOnDate
+### `wagesEarnedOnDate`
 
 * **Argument(s)**
   * A date of the form `"YYYY-MM-DD"`
@@ -121,7 +121,7 @@ the function returns.
   * Using `hoursWorkedOnDate`, multiply the hours by the record's
     payRate to determine amount owed. Amount should be returned as a number.
 
-### allWagesFor
+### `allWagesFor`
 
 * **Argument(s)**
   * _None_
@@ -132,7 +132,7 @@ the function returns.
     employee in the record used as context. Amount should be returned as a
     number. **HINT**: You will need to find the available dates somehow....
 
-### findEmployeebyFirstName
+### `findEmployeebyFirstName`
 
 * **Argument(s)**
   * `srcArray`: Array of employee records
@@ -142,7 +142,7 @@ the function returns.
 * **Behavior**
   * Test the `firstName` field for a match with the `firstName` argument
 
-### calculatePayroll
+### `calculatePayroll`
 
 * **Argument(s)**
   * `Array` of employee records
