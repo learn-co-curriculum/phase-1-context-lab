@@ -80,7 +80,7 @@ the function returns.
 * **Argument(s)**
   * A date stamp
 * **Returns**
-  * The record used as execution context
+  * The record that was just updated
 * **Behavior**
   * Add an `Object` with keys:
     * `type`: Set to `"TimeIn"`
@@ -93,7 +93,7 @@ the function returns.
 * **Argument(s)**
   * A date stamp
 * **Returns**
-  * The record used as execution context
+  * The record that was just updated
 * **Behavior**
   * Add an `Object` with keys:
     * `type`: Set to `"TimeOut"`
