@@ -3,6 +3,7 @@
 ## Learning Goals
 
 * Explicitly override context with `call` and `apply`
+* Explicitly lock context for a function with bind
 
 ## Introduction
 
