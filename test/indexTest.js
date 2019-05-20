@@ -39,7 +39,7 @@ describe("The payroll system", function () {
     })
   })
 
-  describe("process an Array of Arrays into an Array of Employee records", function () {
+  describe("process an Array of Arrays into an Array of employee records", function () {
     it("has a function called createEmployees", function () {
       expect(createEmployees).to.exist
     })
