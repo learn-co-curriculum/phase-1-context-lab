@@ -173,7 +173,7 @@ describe("The payroll system", function () {
     })
 
     describe("allWagesFor", function () {
-      it("calculates that the employee earned 54 dollars", function () {
+      it("calculates that the employee earned 378 dollars", function () {
         cRecord = createEmployeeRecord(["Julius", "Caesar", "General", 27])
         // Earns 324
         createTimeInEvent.call(cRecord, "44-03-14 0900")
@@ -189,7 +189,7 @@ describe("The payroll system", function () {
 
   describe("Given an array of multiple employees", function () {
     it("payrollExpense aggregates all the dates' wages and adds them together", function () {
-      expect(allWagesFor).to.exist
+      expect(calculatePayroll).to.exist
     })
 
     describe("payrollExpense", function () {
