@@ -67,7 +67,7 @@ the function returns.
     _Additionally_, initialize empty `Array`s on the properties `timeInEvents`
     and `timeOutEvents`.
 
-### `createEmployees`
+### `createEmployeeRecords`
 
 * **Argument(s)**
   * `Array` of `Arrays`

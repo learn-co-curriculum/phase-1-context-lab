@@ -40,11 +40,11 @@ describe("The payroll system", function () {
   })
 
   describe("process an Array of Arrays into an Array of employee records", function () {
-    it("has a function called createEmployees", function () {
-      expect(createEmployees).to.exist
+    it("has a function called createEmployeeRecords", function () {
+      expect(createEmployeeRecords).to.exist
     })
 
-    describe("createEmployees", function () {
+    describe("createEmployeeRecords", function () {
       let employeeRecords;
 
       let twoRows = [
@@ -54,17 +54,17 @@ describe("The payroll system", function () {
 
       it("its implementation makes use of of the createEmployeeRecord function", function(){
         let mySpy = chai.spy.on(window, "createEmployeeRecord")
-        createEmployees([["Mister", "Matt", "Chief Awesomeness Offiser", 1000]])
+        createEmployeeRecords([["Mister", "Matt", "Chief Awesomeness Offiser", 1000]])
         expect(mySpy).to.have.been.called()
       })
 
       it("creates two records", function () {
-        let employeeRecords = createEmployees(twoRows)
+        let employeeRecords = createEmployeeRecords(twoRows)
         expect(employeeRecords.length).to.equal(2)
       })
 
       it("correctly assigns the first names", function () {
-        let employeeRecords = createEmployees(twoRows)
+        let employeeRecords = createEmployeeRecords(twoRows)
         let nameExtractor = function (e) { return e.firstName }
         expect(employeeRecords.map(nameExtractor)).to.eql(["moe", "bartholomew"]);
       })
@@ -321,7 +321,7 @@ describe("The payroll system", function () {
           })
 
           it("correctly sums the payroll burden to $11,880 when passed an array of employee records", function () {
-            let employeeRecords = createEmployees(csvDataEmployees)
+            let employeeRecords = createEmployeeRecords(csvDataEmployees)
             employeeRecords.forEach(function (rec) {
               let timesInRecordRow = csvTimesIn.find(function (row) {
                 return rec.firstName === row[0]
