@@ -133,7 +133,7 @@ the function returns.
     employee in the record used as context. Amount should be returned as a
     number. **HINT**: You will need to find the available dates somehow....
 
-### `findEmployeebyFirstName`
+### `findEmployeeByFirstName`
 
 * **Argument(s)**
   * `srcArray`: Array of employee records

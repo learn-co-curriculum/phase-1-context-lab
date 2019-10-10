@@ -263,9 +263,9 @@ describe("The payroll system", function () {
       })
     })
 
-    describe("Dependent functions: findEmployeebyFirstName(collection, firstNameString)", function () {
+    describe("Dependent functions: findEmployeeByFirstName(collection, firstNameString)", function () {
       it("exists", function () {
-        expect(findEmployeebyFirstName).to.exist
+        expect(findEmployeeByFirstName).to.exist
       })
 
       it("finds \"Loki\" ", function () {
@@ -274,7 +274,7 @@ describe("The payroll system", function () {
           ["Natalia", "Romanov", "CEO", 150]
         ]
         let emps = createEmployeeRecords(src)
-        let loki = findEmployeebyFirstName(emps, "Loki")
+        let loki = findEmployeeByFirstName(emps, "Loki")
         expect(loki.familyName).to.equal("Laufeysson-Odinsson")
       })
     })
