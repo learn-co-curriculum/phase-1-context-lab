@@ -80,7 +80,7 @@ the function returns.
 ### `createTimeInEvent`
 
 * **Argument(s)**
-  * A date stamp (`"YYYY-MM-DD"`)
+  * A date stamp (`"YYYY-MM-DD HHMM"`), where time is expressed in [24-hour standard][miltime]
 * **Returns**
   * The record that was just updated
 * **Behavior**
@@ -93,7 +93,7 @@ the function returns.
 ### `createTimeOutEvent`
 
 * **Argument(s)**
-  * A date stamp (`"YYYY-MM-DD"`)
+  * A date stamp (`"YYYY-MM-DD HHMM"`), where time is expressed in [24-hour standard][miltime]
 * **Returns**
   * The record that was just updated
 * **Behavior**
@@ -182,3 +182,4 @@ cool things
 [bind]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind
 [call]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/call
 [apply]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/apply
+[miltime]: https://en.wikipedia.org/wiki/24-hour_clock
