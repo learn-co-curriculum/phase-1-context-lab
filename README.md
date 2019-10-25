@@ -21,7 +21,7 @@ leave, the employee will "punch out."
 For simplicity's sake, we'll make these assumptions:
 
 1. Assume that employees always check in and check out
-2. Assume employees always check in and our on the hour
+2. Assume employees always check in and out on the hour
 3. The time is represented on a 24-hour clock (1300 is 1:00 pm); this keeps the
    math easier and is the standard in most of the world
 4. When timestamps are needed, they will be provided as Strings in the form:
