@@ -127,7 +127,7 @@ the function returns.
 * **Argument(s)**
   * _None_
 * **Returns**
-  * Sum of pay owed to all employees for all dates, as a number
+  * Sum of pay owed to **one** employee for all dates, as a number
 * **Behavior**
   * Using `wagesEarnedOnDate`, accumulate the value of all dates worked by the
     employee in the record used as context. Amount should be returned as a
@@ -148,11 +148,11 @@ the function returns.
 * **Argument(s)**
   * `Array` of employee records
 * **Returns**
-  * Pay owed for all dates
+  * Sum of pay owed for **all** employees for all dates, as a number
 * **Behavior**
-  * Using `wagesEarnedOnDate`, accumulate the value of all dates worked by the
-    employee in the record used as context. Amount should be returned as a
-    number.
+  * Using `allWagesFor` for each of the employees, accumulate the value of
+    all dates worked by the employee in the record used as context. Amount
+    should be returned as a number.
 
 ## A Mystery on the Horizon
 
