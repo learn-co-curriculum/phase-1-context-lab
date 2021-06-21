@@ -1,4 +1,4 @@
-# JavaScript Advanced Functions: Context Lab
+# Context Lab
 
 ## Learning Goals
 
