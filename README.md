@@ -2,8 +2,8 @@
 
 ## Learning Goals
 
-* Explicitly override context with `call` and `apply`
-* Explicitly lock context for a function with bind
+* Update our time-card and payroll application to use the employee record as
+  context rather than passing it as an argument.
 
 ## Introduction
 
@@ -34,20 +34,18 @@ understand how to "grow" an application in "record-oriented" fashion in
 JavaScript, as well as pass the lab. Make sure you're learning about this app
 design while you pass the solutions.
 
-As before, if you find yourself having extra time, use the guidance in the
-previous lab to make your application more robust.
+Code your solution in `index.js`. To get everything passing, you will need to
+exercise the collection-processing strengths you developed earlier in this
+Phase.
 
-Take advantage of your collection-processing strengths that you trained up over
-the last few lessons.
-
-Put your code in `index.js`.
+As before, if you have extra time, use the guidance in the previous lab to make
+your application more robust.
 
 While you will want to be guided by the tests, you will implement the following
 functions. To make the tests easier to read, we've provided the _signatures_ of
-the functions.
-
-A function _signature_ is the function name, the arguments it expects, and what
-the function returns.
+the functions. (A function _signature_ is the function name, the arguments it
+expects, and what the function returns.) Be sure to refer back to this
+information as you work through the tests.
 
 ### `createEmployeeRecord`
 
@@ -88,7 +86,6 @@ the function returns.
     * `type`: Set to `"TimeIn"`
     * `hour`: Derived from the argument
     * `date`: Derived from the argument
-
 
 ### `createTimeOutEvent`
 
@@ -158,20 +155,11 @@ the function returns.
 
 You'll notice that in this lab we give you the implementation of `allWagesFor`.
 As part of writing this challenge, we ran right smack into one of the most
-famous bugs in JavaScript land: "the lost context bug." Because we've not
-taught you to deal with it, we've "given" you this function. We think you can
-solve the other tests with this little piece having been given to you.
+famous bugs in JavaScript land: "the lost context bug." Because we haven't
+taught you to deal with it yet, we've "given" you this function.
 
-If you find yourself having extra time, try researching this topic on your own.
-We'll tell you all about it in our next lesson, though.
-
-## Conclusion
-
-This is one of the hardest topics in JavaScript. But you have hands-on
-experience with the why and motivations of it! You're so much better off than
-most JavaScript hackers who _never_ quite get the hang of it. It's been a lot
-of growth, but this hard-won knowledge is going to help you do staggeringly
-cool things
+If you have extra time, try researching this topic on your own. We'll tell you
+all about it in our next lesson, though.
 
 ## Resources
 
