@@ -206,11 +206,11 @@ describe("The payroll system", function () {
   })
 
   describe("Given an array of multiple employees", function () {
-    it("payrollExpense aggregates all the dates' wages and adds them together", function () {
-      expect(calculatePayroll).to.exist
+    it("allWagesFor aggregates all the dates' wages and adds them together", function () {
+      expect(allWagesFor).to.exist
     })
 
-    describe("payrollExpense", function () {
+    describe("allWagesFor", function () {
       it("calculates that the employees earned 770 dollars", function () {
         let rRecord = createEmployeeRecord(["Rafiki", "", "Aide", 10])
         let sRecord = createEmployeeRecord(["Simba", "", "King", 100])
