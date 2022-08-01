@@ -297,7 +297,7 @@ describe("The payroll system", function () {
       const csvTimesIn = [
         ["Thor", ["2018-01-01 0800", "2018-01-02 0800", "2018-01-03 0800"]],
         ["Loki", ["2018-01-01 0700", "2018-01-02 0700", "2018-01-03 0600"]],
-        ["Natalia", ["2018-01-03 1700", "2018-01-05 1800", "2018-01-03 1300"]],
+        ["Natalia", ["2018-01-01 1700", "2018-01-05 1800", "2018-01-03 1300"]],
         ["Darcey", ["2018-01-01 0700", "2018-01-02 0800", "2018-01-03 0800"]],
         ["Jarvis", ["2018-01-01 0500", "2018-01-02 0500", "2018-01-03 0500"]],
         ["Anthony", ["2018-01-01 1400", "2018-01-02 1400", "2018-01-03 1400"]]
@@ -306,7 +306,7 @@ describe("The payroll system", function () {
       const csvTimesOut = [
         ["Thor", ["2018-01-01 1600", "2018-01-02 1800", "2018-01-03 1800"]],
         ["Loki", ["2018-01-01 1700", "2018-01-02 1800", "2018-01-03 1800"]],
-        ["Natalia", ["2018-01-03 2300", "2018-01-05 2300", "2018-01-03 2300"]],
+        ["Natalia", ["2018-01-01 2300", "2018-01-05 2300", "2018-01-03 2300"]],
         ["Darcey", ["2018-01-01 1300", "2018-01-02 1300", "2018-01-03 1300"]],
         ["Jarvis", ["2018-01-01 1800", "2018-01-02 1800", "2018-01-03 1800"]],
         ["Anthony", ["2018-01-01 1600", "2018-01-02 1600", "2018-01-03 1600"]]
@@ -320,7 +320,7 @@ describe("The payroll system", function () {
             expect(calculatePayroll).to.exist
           })
 
-          it("correctly sums the payroll burden to $11,880 when passed an array of employee records", function () {
+          it("correctly sums the payroll burden to $12,480 when passed an array of employee records", function () {
             let employeeRecords = createEmployeeRecords(csvDataEmployees)
             employeeRecords.forEach(function (rec) {
               let timesInRecordRow = csvTimesIn.find(function (row) {
@@ -339,7 +339,7 @@ describe("The payroll system", function () {
                 createTimeOutEvent.call(rec, timeOutStamp)
               })
             }) 
-            expect(calculatePayroll(employeeRecords)).to.eql(11880)
+            expect(calculatePayroll(employeeRecords)).to.eql(12480)
           })
         })
       })
