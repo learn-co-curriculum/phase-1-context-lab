@@ -1,3 +1,5 @@
+require ( './helpers.js' );
+
 const helpers = require('./helpers')
 
 describe("The payroll system", function () {
@@ -346,5 +348,3 @@ describe("The payroll system", function () {
     })
   })
 })
-
-
